@@ -1,4 +1,4 @@
-# ☕ Java Fullstack Mastery 🚀
+#  Java Fullstack Mastery 🚀
 
 Hi, I am **Omkar** — an aspiring Java Fullstack Developer!
 
