@@ -1,0 +1,102 @@
+# Java Fullstack: Daily Notes & Interview Prep
+
+## Day 2 Topic: ArrayList (Collections Framework)
+
+### 1. Theory (थेअरी - सोप्या भाषेत)
+*   **ArrayList म्हणजे काय?:** हा Java मधील `java.util` पॅकेजचा एक भाग आहे. हा एक 'जादूचा डबा' (Dynamic Array) आहे ज्याची लांबी (Size) आपण कधीही बदलू शकतो.
+*   **Array vs ArrayList (सर्वात महत्त्वाचा फरक):** 
+    *   **Array:** एकदा बनवला की त्याची साईझ (Size) फिक्स राहते. (उदा. ३ डबे).
+    *   **ArrayList:** जेवढा डेटा टाकाल, तेवढा तो आपोआप मोठा होतो (Expand) आणि काढला की छोटा होतो (Shrink).
+*   **Primitive Types नाही:** ArrayList मध्ये आपण साधे (`int`, `char`, `double`) टाकू शकत नाही.त्यासाठी आपल्याला Wrapper Classes (`Integer`, `Character`, `Double`) वापरावे लागतात.
+
+### 2. Industry Example (कंपनीतील उपयोग)
+*   **Amazon Shopping Cart:** जेव्हा तुम्ही ॲमेझॉनवर एकामागून एक वस्तू तुमच्या 'Cart' मध्ये ऍड करता, तेव्हा ती वस्तू [ArrayList](file:///a:/My%20College%20&%20Job%20Prep/Java_Fullstack_Mastery/Day_02_Collections/ArrayListDemo.java#3-27) मध्ये `cart.add("Product")` या पद्धतीने सेव्ह होते. कारण युजर किती वस्तू घेईल हे ॲमेझॉनला आधी माहित नसतं.
+
+### 3. Syntax & Practical Code (कोडिंग)
+```java
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+        // 1. Daba Banavne (Declaration)
+        ArrayList<String> cart = new ArrayList<>();
+        
+        // 2. Vastu Takne (Add)
+        cart.add("Laptop");
+        cart.add("Mouse");
+        
+        // 3. Vastu Baghne (Get) -> Output: Laptop
+        System.out.println(cart.get(0));
+        
+        // 4. Vastu Kadun Takne (Remove) -> Mouse deleted
+        cart.remove("Mouse");
+        
+        // 5. Total count baghne
+        System.out.println("Total items: " + cart.size());
+    }
+}
+```
+
+### 4. Interview Preparation (HR / Technical Questions)
+*   **Q1. What is the difference between Array and ArrayList in Java?**
+    *   *Pro Answer:* "Sir, Arrays have a fixed size, while ArrayLists have a dynamic size. We can change the size of ArrayList at runtime, but not an Array."
+*   **Q2. Can we put primitive data types (like int, float) directly into an ArrayList?**
+    *   *Pro Answer:* "No Sir. ArrayList only stores Objects. To store numbers, we must use Wrapper classes like `Integer` instead of `int`."
+
+### 5. How to make your Notebook (वहीत काय लिहायचं?)
+पुढच्या वेळी इंटरव्यूला जाताना पूर्ण पुस्तक वाचायची गरज नाही. तुमच्या वहीत फक्त एवढंच लिहा:
+1. Title: ArrayList
+2. Difference Point: "Dynamic vs Fixed Size"
+3. The 4 Main Commands: `add()`, `get()`, `remove()`, `size()`.
+4. The 2 Interview Questions written above.
+
+---
+
+## Day 2 Topic: HashMap (Collections Framework)
+
+### 1. Theory (थेअरी - सोप्या भाषेत)
+*   **HashMap म्हणजे काय?:** हे 'की-व्हॅल्यू' (Key-Value) जोडीने डेटा साठवते. जसं की एका डिक्शनरीमध्ये एक शब्द (Key) असतो आणि त्याचा अर्थ (Value) असतो.
+*   **Unique Keys:** यामध्ये 'Key' नेहमी वेगळी (Unique) असावी लागते, पण 'Value' सारखी असू शकते.
+*   **Fast Search:** यात एखादी गोष्ट शोधणं खूप फास्ट (O(1)) असतं, कारण आपण थेट 'Key' ने शोधतो.
+
+### 2. Industry Example (कंपनीतील उपयोग)
+*   **Contacts App:** तुझ्या फोनमधील कॉन्टॅक्ट लिस्ट. 
+    *   **Key:** माणसाचं नाव (उदा. "Omkar")
+    *   **Value:** त्याचा फोन नंबर (उदा. "9876543210")
+*   **Login System:** युजरनेम (Key) आणि पासवर्ड (Value).
+
+### 3. Syntax & Practical Code (कोडिंग)
+```java
+import java.util.HashMap;
+
+class HashMapDemo {
+    public static void main(String[] args) {
+        // 1. Daba Banavne (Key, Value)
+        HashMap<String, String> contacts = new HashMap<>();
+        
+        // 2. Data Takne (Put)
+        contacts.put("Omkar", "9876543210");
+        contacts.put("Pratik", "9998887776");
+        
+        // 3. Data Baghne (Get by Key) -> Output: 9876543210
+        System.out.println("Omkar's Number: " + contacts.get("Omkar"));
+        
+        // 4. Data Delete Karne (Remove by Key)
+        contacts.remove("Pratik");
+        
+        // 5. Check if Key exists
+        System.out.println("Has Omkar?: " + contacts.containsKey("Omkar"));
+    }
+}
+```
+
+### 4. Interview Preparation (Questions)
+*   **Q1. Difference between ArrayList and HashMap?**
+    *   *Pro Answer:* "Sir, ArrayList stores data based on index (0, 1, 2...), while HashMap stores data based on a Key-Value pair. ArrayList is better for maintaining order, HashMap is better for fast searching."
+*   **Q2. Can we have duplicate Keys in HashMap?**
+    *   *Pro Answer:* "No Sir. Keys must be unique. If we add a new value with an existing key, it will overwrite the old value."
+
+### 5. How to make your Notebook
+1. Title: HashMap (Key-Value Pair).
+2. Key Commands: `put()`, `get()`, `remove()`, `containsKey()`.
+3. Example: Name -> Phone Number.

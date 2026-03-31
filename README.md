@@ -11,8 +11,9 @@ This repository tracks my daily learning journey, starting from total basics to 
 | Day | Topic | Highlights | Code Link |
 |-----|-------|------------|-----------|
 | **Day 1** | Java Basics | Variables, If-Else, For-Loop | [Code](Day_01_Basics/Main.java) |
-| **Day 2** | Collections | ArrayList (Amazon Cart Logic) | [Code](Day_02_Collections/ArrayListDemo.java) |
-| **Day 3** | Collections | HashMap (Contacts/Dictionary) | 🔜 Next |
+| **Day 2** | Collections | ArrayList & HashMap | [Code](Day_02_Collections/) |
+| **Day 3** | OOPs Basics | Classes & Objects | [Code](Day_03_OOPs/StudentDemo.java) |
+| **Day 4** | OOPs Pro | Inheritance & Encapsulation | 🔜 Next |
 
 ---
 
